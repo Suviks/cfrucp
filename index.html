@@ -1,63 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Todo List</title>
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/Suviks/cfrucp/main/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/Suviks/cfrucp/main/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/Suviks/cfrucp/main/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="script.js" defer></script>
+  <link href="styles.css" rel="stylesheet">
+  <title>Tabs</title>
 </head>
-
 <body>
-  <header class="bg-dark mb-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <nav class="navbar justify-content-between">
-            <a class="navbar-brand">Todo List</a>
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-                id="searchtextbox" />
-            </form>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <section class="todo-outer">
-    <div class="container">
-      <div class="row justify-content-md-center">
-        <div class="col-sm-12 col-md-8">
-          <h1>Welcome in Todo List Application</h1>
-          <div class="todo-inner">
-            <div class="form-row">
-              <div class="col-8 mr-sm-2">
-                <input type="text" class="form-control" placeholder="Enter your task" id="addtaskinput" />
-                <input type="hidden" id="saveindex">
-              </div>
-              <button type="button" class="btn btn-success mr-sm-2" id="addtaskbtn">
-                Add Task
-              </button>
-              <button type="button" class="btn btn-success mr-sm-2" id="savetaskbtn" style="display: none;">
-                Save Task
-              </button>
-              <button type="button" id="deleteallbtn" class="btn btn-danger">
-                Delete All
-              </button>
-            </div>
-            <div class="to-do-output">
-              <table class="table table-striped mt-3 mb-0" id="addedtasklist">
-                
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script src="https://raw.githubusercontent.com/Suviks/cfrucp/main/js/main.js"></script>
-</body>
+  <ul class="tabs">
+    <li data-tab-target="#home" class="active tab">Home</li>
+    <li data-tab-target="#pricing" class="tab">Pieejas</li>
+    <li data-tab-target="#about" class="tab">About</li>
+  </ul>
 
+  <div class="tab-content">
+    <div id="home" data-tab-content class="active">
+      <h1>Home</h1>
+      <p>This is the home</p>
+    </div>
+    <div id="pricing" data-tab-content>
+      <h1>Pieejas</h1>
+      <p>Pievienot pieejas -->></p>
+    </div>
+    <div id="about" data-tab-content>
+      <h1>About</h1>
+      <p>Let me tell you about me</p>
+    </div>
+  </div>
+</body>
 </html>
